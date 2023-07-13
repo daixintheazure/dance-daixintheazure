@@ -1,1 +1,13 @@
 /* Write your CSS here! */
+body {
+    width: 100%;
+    margin: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#mainHeading {
+    color: red;
+}
