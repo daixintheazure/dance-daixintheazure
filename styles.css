@@ -1,6 +1,10 @@
 /* Write your CSS here! */
 body {
-    width: 100%;
+    min-height: 600px;
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
     margin: 8px;
     background-color: black;
 }
@@ -9,18 +13,92 @@ h1 {
     text-align: center;
 }
 
+p {
+    text-align: left;
+    margin: 8px;
+}
+
+ul{
+    text-align: left;
+}
+
+
 #mainHeading {
     color: red;
 }
 
 .panel{
+    --width: 600px;
+    --height: 750px;
+    --depth: 600px;
+    height: var(--height);
+    width: var(--width);
+    margin: 10px;
+    text-align: center;
     background-color: pink;
+    transform: rotateX(95deg) rotateY(45deg);
     transform-style: preserve-3d;
 }
 
+.reverse{
+    transform: rotateY(180deg);
+}
+
 .panel_tab{
+align-items: center;
 background-color: pink;
 border: 1px solid black;
+position: absolute;
+}
+
+.panel_tab:nth-last-of-type(1){
+    --cofficent: -0.5;
+    height: var(--height);
+    width: var(--width);
+    transform: translate3d(0, 0, calc(var(--depth) * var(--cofficent)));
+}
+
+.panel_tab:nth-last-of-type(2){
+    --cofficent: 0.5;
+    height: var(--height);
+    width: var(--width);
+    transform: translate3d(0, 0, calc(var(--depth) * var(--cofficent)));
+}
+
+.panel_tab:nth-last-of-type(3) {
+    --rotation: 90deg;
+    height: var(--height);
+    width: var(--depth);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation)) translate3d(0, 0, calc(var(--width) * -0.5));
+}
+
+.panel_tab:nth-last-of-type(4){
+    --rotation: -90deg;
+    height: var(--height);
+    width: var(--depth);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation)) translate3d(0, 0, calc(var(--width) * -0.5));
+}
+
+.panel_tab:nth-last-of-type(5){
+    --rotation: -90deg;
+    height: var(--depth);
+    width: var(--width);
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--height) * -0.5));
+}
+
+.panel_tab:nth-last-of-type(6){
+    --rotation: 90deg;
+    height: var(--depth);
+    width: var(--width);
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--height) * -0.5));
 }
 
 #copyrights{
