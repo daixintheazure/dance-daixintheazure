@@ -1,37 +1,39 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
     const baseView = this.document.getElementById("default");
     const summary = this.document.getElementById("summary");
     const star = this.document.getElementById("A star is born");
-    const firstYear = this.document.getElementById("2021");
-    const secondYear = this.document.getElementById("2022");
-    const thirdYear = this.document.getElementById("2023");
+    const firstYear = this.document.getElementById("firstYear");
+    const secondYear = this.document.getElementById("secondYear");
+    const thirdYear = this.document.getElementById("thridYear");
+    const panel = this.document.getElementById("panel");
 
-    baseView.addEventListener("click", funciton() {
+
+    baseView.addEventListener("click", function() {
         panel.style.transform = "rotateX(95deg) rotateY(45deg)";
 
     });
 
-    summary.addEventListener("click", funciton() {
+    summary.addEventListener("click", function() {
         panel.style.transform = "rotateX(90deg)";
 
     });
 
-    star.addEventListener("click", funciton() {
+    star.addEventListener("click", function() {
         panel.style.transform = "rotateY(270deg)";
 
     });
 
-    firstYear.addEventListener("click", funciton() {
-        panel.style.transform = "rotateY(90)deg";
+    firstYear.addEventListener("click", function() {
+        panel.style.transform = "rotateY(90deg)";
 
     });
 
-    secondYear.addEventListener("click", funciton() {
+    secondYear.addEventListener("click", function() {
         panel.style.transform = "rotateX(0deg)";
 
     });
 
-    thirdYear.addEventListener("click", funciton() {
+    thirdYear.addEventListener("click", function() {
         panel.style.transform = "rotateX(180deg) rotateZ(180deg)";
 
     });

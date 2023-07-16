@@ -40,7 +40,7 @@ ul{
     margin: 10px;
     text-align: center;
     background-color: pink;
-    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+    transform: rotateX(95deg) rotateY(45deg);
     transform-style: preserve-3d;
     transition-duration: 1500ms;
 }
